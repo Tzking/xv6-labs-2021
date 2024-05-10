@@ -1,6 +1,9 @@
 // On-disk file system format.
 // Both the kernel and user programs use this header file.
+#ifndef _FS_H_
+#define _FS_H_
 
+#include "types.h"
 
 #define ROOTINO  1   // root i-number
 #define BSIZE 1024  // block size
@@ -58,3 +61,4 @@ struct dirent {
   char name[DIRSIZ];
 };
 
+#endif // _FS_H_

@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        ".mailmap": "markdown",
+        "user.h": "c",
+        "types.h": "c",
+        "fcntl.h": "c",
+        "spinlock.h": "c",
+        "proc.h": "c",
+        "riscv.h": "c",
+        "sleeplock.h": "c",
+        "file.h": "c",
+        "stdarg.h": "c",
+        "syscall.h": "c"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.o": true,
+        "**/*.d": true
+    },
+}

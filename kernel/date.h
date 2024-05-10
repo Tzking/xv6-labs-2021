@@ -1,3 +1,8 @@
+#ifndef __DATE_H__
+#define __DATE_H__
+
+#include "types.h"
+
 struct rtcdate {
   uint second;
   uint minute;
@@ -6,3 +11,5 @@ struct rtcdate {
   uint month;
   uint year;
 };
+
+#endif // __DATE_H__
