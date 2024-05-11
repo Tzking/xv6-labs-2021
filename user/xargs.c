@@ -2,7 +2,7 @@
 #include "kernel/param.h"
 #include "kernel/stat.h"
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
     char *args[MAXARG];
     for (int i = 1; i < argc; i++)
@@ -22,6 +22,5 @@ int main(int argc, char const *argv[])
             wait(0);
         }
     }
-    
     exit(0);
 }
