@@ -8,8 +8,25 @@ int fork(void);
 int exit(int) __attribute__((noreturn));
 int wait(int *);
 int pipe(int *);
-int write(int, const void *, int);
-int read(int, void *, int);
+
+/**
+ * @brief 写文件
+ * @param fd 文件描述符
+ * @param buf 缓冲区
+ * @param size 写入的字节数
+ * @return 0 成功, -1 失败
+ */
+int write(int fd, const void *buf, int size);
+
+/**
+ * @brief 读取文件
+ * @param fd 文件描述符
+ * @param buf 缓冲区
+ * @param size 读取的字节数
+ * @return 0 成功, -1 失败
+ */
+int read(int fd, void *buf, int size);
+
 int close(int);
 int kill(int);
 int exec(char *, char **);

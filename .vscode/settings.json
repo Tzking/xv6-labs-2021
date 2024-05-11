@@ -10,7 +10,10 @@
         "sleeplock.h": "c",
         "file.h": "c",
         "stdarg.h": "c",
-        "syscall.h": "c"
+        "syscall.h": "c",
+        "cstdarg": "c",
+        "stat.h": "c",
+        "param.h": "c"
     },
     "files.exclude": {
         "**/.git": true,

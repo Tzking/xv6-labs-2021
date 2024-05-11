@@ -3,8 +3,7 @@
 #include "kernel/types.h"
 #include "user/user.h"
 
-char *
-strcpy(char *s, const char *t) {
+char *strcpy(char *s, const char *t) {
     char *os;
 
     os = s;
@@ -27,8 +26,7 @@ uint strlen(const char *s) {
     return n;
 }
 
-void *
-memset(void *dst, int c, uint n) {
+void *memset(void *dst, int c, uint n) {
     char *cdst = (char *)dst;
     int i;
     for (i = 0; i < n; i++) {
@@ -37,16 +35,14 @@ memset(void *dst, int c, uint n) {
     return dst;
 }
 
-char *
-strchr(const char *s, char c) {
+char *strchr(const char *s, char c) {
     for (; *s; s++)
         if (*s == c)
             return (char *)s;
     return 0;
 }
 
-char *
-gets(char *buf, int max) {
+char *gets(char *buf, int max) {
     int i, cc;
     char c;
 
@@ -62,6 +58,12 @@ gets(char *buf, int max) {
     return buf;
 }
 
+/**
+ * @brief 获取文件信息
+ * @param n 文件名
+ * @param st 文件信息
+ * @return 0 成功, -1 失败
+ */
 int stat(const char *n, struct stat *st) {
     int fd;
     int r;
@@ -76,15 +78,20 @@ int stat(const char *n, struct stat *st) {
 
 int atoi(const char *s) {
     int n;
-
     n = 0;
     while ('0' <= *s && *s <= '9')
         n = n * 10 + *s++ - '0';
     return n;
 }
 
-void *
-memmove(void *vdst, const void *vsrc, int n) {
+/**
+ * @brief 内存拷贝
+ * @param vdst 目的地址
+ * @param vsrc 源地址
+ * @param n 长度
+ * @return 目的地址
+ */
+void *memmove(void *vdst, const void *vsrc, int n) {
     char *dst;
     const char *src;
 
@@ -114,7 +121,6 @@ int memcmp(const void *s1, const void *s2, uint n) {
     return 0;
 }
 
-void *
-memcpy(void *dst, const void *src, uint n) {
+void *memcpy(void *dst, const void *src, uint n) {
     return memmove(dst, src, n);
 }
