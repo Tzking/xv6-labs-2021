@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        ".mailmap": "markdown",
+        "fs.h": "c",
+        "param.h": "c",
+        "spinlock.h": "c",
+        "proc.h": "c",
+        "riscv.h": "c",
+        "user.h": "c",
+        "defs.h": "c",
+        "memlayout.h": "c",
+        "sysinfo.h": "c",
+        "types.h": "c"
+    }
+}
