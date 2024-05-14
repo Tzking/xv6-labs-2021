@@ -3,11 +3,8 @@
 
 #include "types.h"
 
-
-
 // which hart (core) is this?
-static inline uint64
-r_mhartid() {
+static inline uint64 r_mhartid() {
     uint64 x;
     asm volatile("csrr %0, mhartid" : "=r"(x));
     return x;

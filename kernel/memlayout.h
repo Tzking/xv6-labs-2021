@@ -1,4 +1,8 @@
 // Physical memory layout
+#ifndef _MEM_LAYOUT_H_
+#define _MEM_LAYOUT_H_
+
+#include "riscv.h"
 
 // qemu -machine virt is set up like this,
 // based on qemu's hw/riscv/virt.c:
@@ -65,3 +69,5 @@
 //   TRAPFRAME (p->trapframe, used by the trampoline)
 //   TRAMPOLINE (the same page as in the kernel)
 #define TRAPFRAME (TRAMPOLINE - PGSIZE)
+
+#endif // _MEM_LAYOUT_H_
