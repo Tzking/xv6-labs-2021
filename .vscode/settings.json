@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        ".mailmap": "markdown",
+        "types.h": "c",
+        "riscv.h": "c",
+        "memlayout.h": "c",
+        "param.h": "c",
+        "fs.h": "c",
+        "elf.h": "c",
+        "defs.h": "c",
+        "proc.h": "c",
+        "sleeplock.h": "c",
+        "spinlock.h": "c",
+        "printf.h": "c"
+    }
+}
